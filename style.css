@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  width: 50%;
+  padding: 70px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.label {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 25px;
+  background-color: antiquewhite;
+  height: 2.5rem;
+  width: 85%;
+  border: none;
+  padding-left: 15px;
+  font-size: 1.1rem;
+  font-size: bold;
+}
+
+button {
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  color: black;
+  border: none;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Change to column direction */
+  width: 100%;
+}
+
+li {
+  background-color: rgb(160, 158, 190);
+  border-radius: 25px;
+  margin-bottom: 10px;
+  height: 2.5rem;
+  color: black;
+  /* min-width: 100%; Remove this line */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; Remove this line */
+  padding-left: 15px;
+  font-size: 1.1rem;
+  /* font-size: bold; This is not a valid font-size property */
+}
+
+.deleteTask {
+  padding-right: 15px;
+  color: black;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+@media screen and (min-width: 800px) {
+  .container {
+    width: 30vw;
+    /* height: 40vh; */
+  }
+}
