@@ -14,66 +14,69 @@ body {
 .container {
   width: 50%;
   padding: 70px;
-  background-color: black;
+  background-color: rgb(88, 101, 99);
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   text-align: center;
+  font-size: bold;
   margin-bottom: 2rem;
 }
 
 .label {
   display: flex;
-  gap: 18px;
+  gap: 15px;
   margin-bottom: 10px;
+  outline: none;
 }
 
 input {
   border-radius: 25px;
-  background-color: antiquewhite;
+  /* background-color: rgb(225, 225, 225); */
   height: 2.5rem;
   width: 85%;
+  outline: none;
   border: none;
+  padding: 5px;
   padding-left: 15px;
   font-size: 1.1rem;
   font-size: bold;
+  margin-bottom: 0.5rem;
 }
 
 button {
-  background-color: antiquewhite;
+  /* background-color: rgb(237, 229, 238); */
   border-radius: 1rem;
   color: black;
   border: none;
+  outline: none;
   font-size: 1.2rem;
-  padding: 5px 10px;
+  padding: 5px 15px;
   cursor: pointer;
+  margin-bottom: 0.5rem;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Change to column direction */
+  flex-direction: column;
   width: 100%;
 }
 
 li {
-  background-color: rgb(160, 158, 190);
+  background-color: rgb(225, 225, 225);
   border-radius: 25px;
   margin-bottom: 10px;
-  height: 2.5rem;
+  height: 1.5rem;
   color: black;
-  /* min-width: 100%; Remove this line */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; Remove this line */
-  padding-left: 15px;
+  /* padding-left: 15px; */
   font-size: 1.1rem;
-  /* font-size: bold; This is not a valid font-size property */
 }
 
 .deleteTask {
@@ -82,6 +85,35 @@ li {
   cursor: pointer;
   font-size: 1.2rem;
   margin-left: 10px;
+}
+ul li {
+  /* color: white; */
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  font-size: 1.12rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-image: url(./unchecked.svg);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 18px;
+}
+ul li.checked {
+  color: red;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(checked.svg);
 }
 @media screen and (min-width: 800px) {
   .container {

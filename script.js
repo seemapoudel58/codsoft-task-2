@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
   const taskList = document.getElementById('taskList');
   const taskInput = document.getElementById('text');
@@ -9,12 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (newTask !== '') {
       const li = document.createElement('li');
       li.innerHTML = `
-        <span>${newTask}</span>
+        <span class="custom-span">${newTask}</span>
         <i class="fas fa-times deleteTask"></i>
       `;
 
       li.querySelector('.deleteTask').addEventListener('click', () => {
         taskList.removeChild(li);
+      });
+
+      li.addEventListener('click', () => {
+        li.classList.toggle('checked');
       });
 
       taskList.appendChild(li);
