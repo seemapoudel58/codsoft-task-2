@@ -108,7 +108,7 @@ ul li::before {
   top: 12px;
   left: 18px;
 }
-ul li.checked {
+ul li span.custom-span.checked {
   color: red;
   text-decoration: line-through;
 }
